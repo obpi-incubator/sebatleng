@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Sebatleng Enterprises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background mining engineering really pic.jpg') no-repeat center center/cover;
+            color: black;
+			 animation: dance 5s infinite alternate;
+    background-size: 150% 150%;
+}
+
+@keyframes dance {
+    0% { background-position: 0% 50%; }
+    150% { background-position: 150% 50%; }
+}
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color:white;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 100px; /* Adjust the logo size */
+            margin-right: 10px; /* Space between logo and text */
+        }
+		 .hexagon-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+        .hexagon {
+            width: 250px;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+       
+        .nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+			background-color: rgba(255, 255, 255, 0.7); /* White with slight transparency */
+    border: none;
+        }
+
+        .nav a, .dropbtn {
+            color: black;
+            text-decoration: none;
+            padding: 12px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: rgba(128, 0, 0, 0.9);
+            min-width: 180px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            display: block;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .dropdown:focus-within .dropdown-content,
+        .dropbtn:focus + .dropdown-content {
+            display: block;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(128, 0, 0, 0.4); /* Same as header section background color */
+            position: relative;
+        }
+
+
+#hero-text {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+        .hero h1 {
+            font-size: 40px;
+        }
+        .hero p {
+            font-size: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background: maroon;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid white;
+        }
+
+        /* Curved Line at the Bottom of Hero Section */
+        .hero-line {
+            position: relative;
+            height: 50px;
+            width: 100%;
+            background: rgba(128, 0, 0, 0.8);
+            clip-path: ellipse(70% 30% at 50% 100%);
+            margin-top: 20px;
+        }
+
+        /* Image Section Between Hero Section and Line */
+        .image-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -40px; /* Adjust image's position between hero and line */
+            position: relative;
+            z-index: 1;
+			
+        }
+        .image-section img {
+            width: 40%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+			 
+        }
+
+        .content-section {
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+        }
+        .content-text {
+            width: 50%;
+        }
+              .content-image {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .content-image img {
+            width: 30%;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .content-image img:hover {
+            transform: scale(1.1);
+        }
+
+      .info-section {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 50px;
+        background: #eee; /* Light grey background */
+        color: #333;
+        text-align: center;
+    }
+
+    .info-box {
+        width: 30%;
+        padding: 20px;
+        border-radius: 10px;
+        background: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .info-box:hover {
+        transform: translateY(-5px); /* Hover effect */
+    }
+
+    .info-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+	.footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid maroon;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .footer-section p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 5px;
+            font-size: 24px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: maroon;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid maroon;
+            font-size: 14px;
+        }
+
+        .footer i {
+            margin-right: 10px;
+        }
+    </style>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!-- Logo Image -->
+        <div class="logo">
+            <img src="WhatsApp_Image_2025-03-17_at_10.44.38_0e6b5442-removebg-preview.png" alt="Sebatleng Enterprises Logo"> <!-- Replace with your logo path -->
+           
+        </div>
+    <div class="nav">
+        <a href="#home">Home</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Services ▾</button>
+            <div class="dropdown-content">
+                <a href="#mining-engineering">Mining Engineering</a>
+                <a href="#waste">Waste</a>
+            </div>
+        </div>
+
+        <a href="#projects">Projects</a>
+
+        <div class="dropdown">
+            <button class="dropbtn">Media ▾</button>
+            <div class="dropdown-content">
+                <a href="#gallery">Gallery</a>
+                <a href="#events">Events</a>
+            </div>
+        </div>
+
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+<div class="hero">
+    <h1 id="hero-text"></h1>
+    <p>Mining Engineering & Waste Management Experts</p>
+    <a href="#services" class="btn">Discover More</a>
+</div>
+
+
+    <div class="content-section">
+        <div class="content-text">
+            <h2>WHY US</h2>
+            <p> Sebatleng Enterprises has recently adopted a collaborative business
+ model by partnering with highly experienced entrepreneurs to deliver
+ reliable and superior service. </p>
+            <h2>MISSION</h2>
+            <p> Sebatleng Enterprises is committed to delivering superior engineering, construction,
+ maintenance, and waste management services through strategic partnerships, high
+quality standards, and innovative solutions.</p>
+            <h2>VISION</h2>
+            <p> To be a leading provider of innovative engineering, mineral processing,
+ construction, and waste management solutions, delivering excellence in
+ plant maintenance, mining services, and steel fabrication while fostering
+ sustainability and operational efficiency</p>
+        </div>
+          <div class="hexagon-gallery">
+        <div class="hexagon" style="background-image: url('waste-management-6810733_1280.jpg');"></div>
+        <div class="hexagon" style="background-image: url('mining-440743_1280.jpg');"></div>
+        <div class="hexagon" style="background-image: url('assortment-dirty-dumped-objects.jpg');"></div>
+    </div>
+    </div>
+    
+        <div class="info-section">
+        <div class="info-box">
+            <img src="about-us.png" alt="About Us" class="info-icon">
+            <h3>About Sebatleng</h3>
+            <p> Sebatleng Enterprises is a 100% black-owned diversified
+ engineering company focusing on the following:Mineral processing,construction, waste management,Plant cleaning and maintenance</p>
+        </div>
+        <div class="info-box">
+            <img src="icons8-service-50.png" alt="Services" class="info-icon">
+            <h3>Services</h3>
+            <p>We provide comprehensive solutions in mining engineering, waste management, and infrastructure development.</p>
+        </div>
+        <div class="info-box">
+            <img src="closure.png" alt="Projects" class="info-icon">
+            <h3>Projects</h3>
+            <p>Discover our successfully completed projects and ongoing developments in the industry.</p>
+        </div>
+    </div>
+
+    
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Sebatleng</h3>
+                <p> Sebatleng Enterprises is a 100% black-owned diversified
+ engineering company focusing on the following:
+ Mineral processing, construction,waste management,Plant cleaning and maintenance</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i>  98 hefer street, Oos-Einder
+ Rustenburg,0309</p>
+                <p><i class="fas fa-phone"></i> 078 472 4935</p>
+                <p><i class="fas fa-envelope"></i> sebatlengenteprises@gmail.com</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Sebatleng Enterprises | Designed with ❤️ by Sindiswa Radebe
+        </div>
+    </div>
+	<script>
+    const text = "Welcome to Sebatleng Enterprises";
+    let index = 0;
+
+    function typeText() {
+        if (index < text.length) {
+            document.getElementById("hero-text").innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeText, 100); // Adjust typing speed
+        }
+    }
+
+    window.onload = function() {
+        typeText();
+    };
+</script>
+
+</body>
+</html>
